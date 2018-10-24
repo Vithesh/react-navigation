@@ -214,6 +214,7 @@ class TabBarBottom extends React.PureComponent {
       style,
       animateStyle,
       tabStyle,
+      activeTabStyle,
       isLandscape,
     } = this.props;
     const { routes } = navigation.state;
@@ -278,6 +279,7 @@ class TabBarBottom extends React.PureComponent {
                         ? styles.tabLandscape
                         : styles.tabPortrait,
                       tabStyle,
+                      focused ? activeTabStyle : null
                     ]}
                   >
                     {this._renderIcon(scene)}
